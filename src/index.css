@@ -1,0 +1,304 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Wedding theme - Sage Green & Cream */
+    --background: 60 30% 98%;
+    --foreground: 150 20% 20%;
+
+    --card: 60 30% 96%;
+    --card-foreground: 150 20% 20%;
+
+    --popover: 60 30% 98%;
+    --popover-foreground: 150 20% 20%;
+
+    /* Sage green primary */
+    --primary: 140 25% 45%;
+    --primary-foreground: 60 30% 98%;
+
+    /* Cream secondary */
+    --secondary: 45 40% 92%;
+    --secondary-foreground: 150 20% 25%;
+
+    --muted: 60 20% 90%;
+    --muted-foreground: 150 10% 45%;
+
+    /* Accent - soft gold */
+    --accent: 40 50% 85%;
+    --accent-foreground: 150 20% 20%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 60 30% 98%;
+
+    --border: 140 15% 85%;
+    --input: 140 15% 85%;
+    --ring: 140 25% 45%;
+
+    --radius: 0.75rem;
+
+    /* Custom wedding tokens */
+    --wedding-sage: 140 25% 45%;
+    --wedding-sage-light: 140 20% 60%;
+    --wedding-sage-dark: 140 30% 35%;
+    --wedding-cream: 45 40% 96%;
+    --wedding-gold: 40 60% 50%;
+    --wedding-rose: 350 60% 70%;
+    --wedding-text: 150 20% 25%;
+
+    /* Decorative */
+    --floral-overlay: linear-gradient(135deg, hsl(140 25% 45% / 0.1), hsl(40 50% 85% / 0.15));
+    --hero-overlay: linear-gradient(180deg, hsl(140 30% 35% / 0.5), hsl(140 25% 45% / 0.6));
+    --section-gradient: linear-gradient(180deg, hsl(60 30% 98%), hsl(45 40% 96%));
+
+    /* Shadows */
+    --shadow-soft: 0 4px 20px hsl(140 25% 45% / 0.1);
+    --shadow-card: 0 8px 30px hsl(140 25% 45% / 0.08);
+    --shadow-elegant: 0 10px 40px hsl(140 30% 35% / 0.15);
+
+    /* Sidebar - matching theme */
+    --sidebar-background: 45 40% 96%;
+    --sidebar-foreground: 150 20% 25%;
+    --sidebar-primary: 140 25% 45%;
+    --sidebar-primary-foreground: 60 30% 98%;
+    --sidebar-accent: 140 20% 90%;
+    --sidebar-accent-foreground: 150 20% 25%;
+    --sidebar-border: 140 15% 85%;
+    --sidebar-ring: 140 25% 45%;
+  }
+
+  .dark {
+    --background: 150 20% 8%;
+    --foreground: 60 20% 95%;
+
+    --card: 150 20% 10%;
+    --card-foreground: 60 20% 95%;
+
+    --popover: 150 20% 10%;
+    --popover-foreground: 60 20% 95%;
+
+    --primary: 140 25% 55%;
+    --primary-foreground: 150 20% 8%;
+
+    --secondary: 150 15% 15%;
+    --secondary-foreground: 60 20% 95%;
+
+    --muted: 150 15% 15%;
+    --muted-foreground: 60 15% 65%;
+
+    --accent: 40 40% 30%;
+    --accent-foreground: 60 20% 95%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 60 20% 95%;
+
+    --border: 150 15% 20%;
+    --input: 150 15% 20%;
+    --ring: 140 25% 55%;
+
+    --sidebar-background: 150 20% 8%;
+    --sidebar-foreground: 60 20% 95%;
+    --sidebar-primary: 140 25% 55%;
+    --sidebar-primary-foreground: 150 20% 8%;
+    --sidebar-accent: 150 15% 15%;
+    --sidebar-accent-foreground: 60 20% 95%;
+    --sidebar-border: 150 15% 20%;
+    --sidebar-ring: 140 25% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Quicksand', sans-serif;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: 'Cormorant Garamond', serif;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: 'Cormorant Garamond', serif;
+  }
+
+  .font-body {
+    font-family: 'Quicksand', sans-serif;
+  }
+
+  .text-shadow {
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  }
+
+  .text-shadow-lg {
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  }
+}
+
+/* Floating hearts animation */
+@keyframes float-heart {
+  0% {
+    transform: translateY(100vh) scale(0);
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  90% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(-100vh) scale(1);
+    opacity: 0;
+  }
+}
+
+.animate-float-heart {
+  animation: float-heart 8s ease-in-out infinite;
+}
+
+/* Leaf decoration animation */
+@keyframes sway {
+
+  0%,
+  100% {
+    transform: rotate(-3deg);
+  }
+
+  50% {
+    transform: rotate(3deg);
+  }
+}
+
+.animate-sway {
+  animation: sway 4s ease-in-out infinite;
+}
+
+/* Fade in up animation */
+@keyframes fade-in-up {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.8s ease-out forwards;
+}
+
+/* Scale in animation */
+@keyframes scale-in {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-scale-in {
+  animation: scale-in 0.5s ease-out forwards;
+}
+
+/* Zoom in animation */
+@keyframes zoom-in {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-zoom-in {
+  animation: zoom-in 0.6s ease-out forwards;
+}
+
+/* Fade in animation */
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.5s ease-out forwards;
+}
+
+/* Pulse glow animation */
+@keyframes pulse-glow {
+
+  0%,
+  100% {
+    box-shadow: 0 0 20px hsl(140 25% 45% / 0.3);
+  }
+
+  50% {
+    box-shadow: 0 0 40px hsl(140 25% 45% / 0.5);
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+/* Scroll reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease-out;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(var(--secondary));
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--primary));
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--wedding-sage-dark));
+}
