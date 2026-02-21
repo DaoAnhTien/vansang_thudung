@@ -10,7 +10,7 @@ const events = [
     time: "Vào lúc 11h",
     venue: "Tư gia nhà gái",
     address: "Thôn Vĩnh Phúc, xã Đức Quang, tỉnh Hà Tĩnh",
-    mapLink: "https://www.google.com/maps/search/Thôn+Vĩnh+Phúc,+xã+Đức+Quang,+Hà+Tĩnh",
+    mapLink: "https://www.google.com/maps?q=18.56690266424763,105.65248253819898",
   },
   {
     title: "LỄ Thành Hôn",
