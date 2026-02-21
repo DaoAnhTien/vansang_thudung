@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "./ui/button";
 import Reveal from "./Reveal";
-import gallery1 from "@/assets/img12.jpg";
+import gallery1 from "@/assets/img10.jpg";
 
 interface TimeLeft {
   days: number;
