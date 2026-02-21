@@ -18,7 +18,7 @@ const events = [
     time: "Vào lúc 11h",
     venue: "Sảnh 1, tầng 1, khách sạn Hoàng Quân",
     address: "Số 58 đường Nguyễn Đổng Chi, phường Nam Hồng Lĩnh, Hà Tĩnh",
-    mapLink: "https://www.google.com/maps/search/Khách+sạn+Hoàng+Quân,+58+Nguyễn+Đổng+Chi,+Nam+Hồng+Lĩnh,+Hà+Tĩnh",
+    mapLink: "https://www.google.com/maps?q=18.52557478223395,105.70177933380131",
   },
 ];
 
